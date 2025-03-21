@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PF-ACTIVITY</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Profile Creation Page -->
+      <div id="profile-page">
+        <h1>Create Your Profile</h1>
+        <form id="profile-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" required />
+
+          <label for="bio">Bio or About Me</label>
+          <textarea id="bio" required></textarea>
+
+          <label for="quote">Favorite Quote</label>
+          <input type="text" id="quote" required />
+
+          <label for="profile-pic">Upload Profile Picture</label>
+          <input type="file" id="profile-pic" accept="image/*" required />
+
+          <button type="submit">Create Profile</button>
+        </form>
+      </div>
+
+      <!-- Feed Page (after profile is created) -->
+      <div id="feed-page" class="hidden">
+            <div class="profile-info">
+              <img id="profile-image" alt="Profile Picture" />
+              <h2 id="profile-name"></h2>
+              <p id="profile-bio"></p>
+              <p id="profile-quote"></p>
+           </div>
+            <div class="tweet-container">
+               <textarea id="tweet-input" placeholder="What's happening?"></textarea>
+               <button id="post-button">Post</button>
+              <div id="tweets"></div>
+           </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
