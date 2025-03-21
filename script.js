@@ -1,4 +1,3 @@
-
 // Switch to the Feed page after profile creation
 document.getElementById('profile-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -69,16 +68,16 @@ document.getElementById('tweets').addEventListener('DOMNodeInserted', function(e
     }
 });
 
-// Function to play sound
-function playClickSound() {
-    const audio = new Audio('click-sound.mp3'); // Ensure this file exists in your project directory
-    audio.play();
-  }
-  
-  // Add event listeners to buttons
-  document.addEventListener('DOMContentLoaded', () => {
+
+// Function to show a popup message
+function showPopupMessage() {
+    alert('The cow says "meow"');
+}
+
+// Add event listeners to buttons
+document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('button');
     buttons.forEach(button => {
-      button.addEventListener('click', playClickSound);
+        button.addEventListener('click', showPopupMessage);
     });
-  });
+});
